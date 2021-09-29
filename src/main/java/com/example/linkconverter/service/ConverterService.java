@@ -1,6 +1,5 @@
 package com.example.linkconverter.service;
 
-import com.example.linkconverter.MatchingParameters;
 import com.example.linkconverter.model.Links;
 import com.example.linkconverter.model.RequestUrl;
 import com.example.linkconverter.repository.LinksRepository;
@@ -18,10 +17,7 @@ public class ConverterService {
     private final LinksRepository linksRepository;
 
     public Links convertUrl(RequestUrl webUrl) {
-        StringBuilder deeplink = new StringBuilder();
-        deeplink.append("ty://?Page=");
         Links links;
-        MatchingParameters matchingParameters = new MatchingParameters();
         if (webUrl.getWebUrl().contains("-p-")) {
             Strategy strategy = new ProductDetailStrategy();
             links = strategy.convertUrl(webUrl);
