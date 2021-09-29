@@ -6,7 +6,7 @@ import com.example.linkconverter.model.RequestUrl;
 
 import java.time.LocalDateTime;
 
-public class SearchStrategy implements Strategy{
+public class SearchStrategy implements LinkConverterStrategy {
 
     @Override
     public Links convertUrl(RequestUrl webUrl) {

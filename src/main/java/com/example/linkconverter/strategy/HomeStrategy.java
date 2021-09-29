@@ -5,7 +5,7 @@ import com.example.linkconverter.model.RequestUrl;
 
 import java.time.LocalDateTime;
 
-public class HomeStrategy implements Strategy{
+public class HomeStrategy implements LinkConverterStrategy {
     @Override
     public Links convertUrl(RequestUrl webUrl) {
         StringBuilder deeplink = new StringBuilder();
